@@ -1,0 +1,21 @@
+{
+  "proto": "HBCE-NODE-HEAD-v1",
+  "node_id": "NODE-0003",
+  "network": "EU",
+  "state": "ONLINE",
+  "role": "DEPLOYMENT_SURFACE",
+  "mode": "APPEND_ONLY",
+  "verification": "DETERMINISTIC_SHA256_MATCH",
+  "failure_mode": "FAIL_CLOSED",
+  "public_data": "HASH_ONLY",
+  "endpoints": {
+    "home": "UNSET",
+    "head": "UNSET",
+    "proofs": "UNSET",
+    "sha256_tool": "UNSET"
+  },
+  "integrity": {
+    "self_hash_sha256": "UNSET",
+    "method": "DETERMINISTIC_SHA256_MATCH"
+  }
+}
