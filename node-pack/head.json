@@ -9,10 +9,10 @@
   "failure_mode": "FAIL_CLOSED",
   "public_data": "HASH_ONLY",
   "endpoints": {
-    "home": "UNSET",
-    "head": "UNSET",
-    "proofs": "UNSET",
-    "sha256_tool": "UNSET"
+    "home": "https://manuelcoletta1-source.github.io/ipr-network-node-0003/",
+    "head": "https://manuelcoletta1-source.github.io/ipr-network-node-0003/node-pack/head.json",
+    "proofs": "https://manuelcoletta1-source.github.io/ipr-network-node-0003/node-pack/proofs.json",
+    "sha256_tool": "https://manuelcoletta1-source.github.io/ipr-network/tools/sha256/"
   },
   "integrity": {
     "self_hash_sha256": "UNSET",
