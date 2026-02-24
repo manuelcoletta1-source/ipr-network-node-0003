@@ -12,7 +12,7 @@
     }
   },
   "integrity": {
-    "self_hash_sha256": "UNSET",
+    "self_hash_sha256": "f5d18903b5441c720c05f8816a8fff07edb8c867a7c36fd0debdbb5bbf21ee67",
     "method": "DETERMINISTIC_SHA256_MATCH"
   },
   "policy": [
