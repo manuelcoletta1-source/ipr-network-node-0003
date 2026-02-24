@@ -1,0 +1,62 @@
+{
+  "proto": "HBCE-REGISTRY-v3",
+  "kind": "IPR_PUBLIC_LEDGER",
+  "network": "EU",
+  "mode": "APPEND_ONLY_PUBLIC_LEDGER",
+  "issuer": "HERMETICUM B.C.E. S.r.l.",
+  "jurisdiction": "EU",
+  "policy": [
+    "HASH_ONLY",
+    "APPEND_ONLY",
+    "FAIL_CLOSED",
+    "UE_FIRST",
+    "AUDIT_FIRST",
+    "GDPR_MIN"
+  ],
+  "rules": {
+    "public_data": "HASH_ONLY",
+    "write_mode": "MANUAL_APPEND_ONLY",
+    "verification": "DETERMINISTIC_SHA256_MATCH",
+    "failure_mode": "FAIL_CLOSED"
+  },
+  "nodes": [
+    {
+      "node_id": "NODE-0001",
+      "role": "ROOT_REGISTRY",
+      "network": "EU",
+      "state": "ONLINE",
+      "endpoints": {
+        "registry": "https://manuelcoletta1-source.github.io/ipr-network/nodes/registry.json",
+        "verify": "https://manuelcoletta1-source.github.io/ipr-network/verify/",
+        "status": "https://manuelcoletta1-source.github.io/ipr-network/status/"
+      },
+      "proofs": {
+        "integrity_sha256": "4f07cb32406ba6b371ecc11e773b3e70decdd8729b9b0df091b8e768e60e12de",
+        "method": "DETERMINISTIC_SHA256_CANONICAL"
+      }
+    },
+    {
+      "node_id": "NODE-0002",
+      "role": "DEPLOYMENT_SURFACE",
+      "network": "EU",
+      "state": "ONLINE",
+      "endpoints": {
+        "home": "https://manuelcoletta1-source.github.io/ipr-network/node-pack/",
+        "head": "https://manuelcoletta1-source.github.io/ipr-network/node-pack/head.json",
+        "proofs": "https://manuelcoletta1-source.github.io/ipr-network/node-pack/proofs.json"
+      }
+    },
+    {
+      "node_id": "NODE-0003",
+      "role": "DEPLOYMENT_SURFACE",
+      "network": "EU",
+      "state": "ONLINE",
+      "endpoints": {
+        "home": "https://manuelcoletta1-source.github.io/ipr-network-node-0003/",
+        "head": "https://manuelcoletta1-source.github.io/ipr-network-node-0003/node-pack/head.json",
+        "proofs": "https://manuelcoletta1-source.github.io/ipr-network-node-0003/node-pack/proofs.json"
+      }
+    }
+  ],
+  "entries": []
+}
