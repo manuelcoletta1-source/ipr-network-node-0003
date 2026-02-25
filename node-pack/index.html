@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>NODE-0003 — Node Pack | HERMETICUM B.C.E.</title>
+  <meta name="description" content="NODE-0003 node-pack surface. Links to head.json and proofs.json for deterministic verification."/>
+
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#0f1620; --text:#e8eef7; --muted:#9fb0c3;
+      --line:rgba(255,255,255,.08); --accent:#00ffe1; --shadow:0 20px 60px rgba(0,0,0,.45);
+      --r:18px; --max:980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(1100px 560px at 20% -10%, rgba(0,255,225,.12), transparent 60%),
+        radial-gradient(900px 500px at 100% 10%, rgba(124,92,255,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:auto;padding:26px 18px 70px}
+    .box{
+      border:1px solid var(--line);
+      border-radius:calc(var(--r) + 4px);
+      padding:26px 20px;
+      background:rgba(15,22,32,.55);
+      box-shadow:var(--shadow);
+    }
+    h1{margin:0 0 10px;font-size:26px;letter-spacing:-.02em}
+    p{margin:0 0 14px;color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{
+      display:inline-block;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:900;font-size:13.5px;
+      background:rgba(255,255,255,.04);
+      transition:.15s;
+    }
+    .btn:hover{transform:translateY(-2px);border-color:rgba(0,255,225,.5)}
+    .btn.primary{
+      border-color:rgba(0,255,225,.75);
+      background:linear-gradient(180deg,rgba(0,255,225,.22),rgba(0,255,225,.06));
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:12px;margin-top:16px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:14px;
+      background:rgba(255,255,255,.03);
+    }
+    .card h2{margin:0 0 6px;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+    .card p{margin:0;color:var(--muted);font-size:13.5px}
+    footer{margin-top:22px;color:var(--muted);font-size:12px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="box">
+      <h1>NODE-0003 — Node Pack</h1>
+      <p>
+        Human-friendly landing for the machine endpoints used by the verifier.
+        This exists to prevent <span class="mono">/node-pack/</span> from returning 404.
+      </p>
+
+      <div class="row">
+        <a class="btn primary" href="./head.json">Open head.json</a>
+        <a class="btn" href="./proofs.json">Open proofs.json</a>
+        <a class="btn" href="../">Back to node home</a>
+        <a class="btn" href="https://manuelcoletta1-source.github.io/ipr-network/verify/">Verify (ROOT)</a>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>head.json</h2>
+          <p>Node identity + endpoints + integrity (canonical SHA-256, fail-closed).</p>
+        </div>
+        <div class="card">
+          <h2>proofs.json</h2>
+          <p>Proof container (timestamps / receipts) + its own integrity hash.</p>
+        </div>
+        <div class="card">
+          <h2>SHA-256 Tool</h2>
+          <p>Use the canonical hashing tool from the root network surface.</p>
+        </div>
+      </div>
+
+      <footer>
+        <span class="mono">HASH_ONLY · APPEND_ONLY · FAIL_CLOSED · UE_FIRST · AUDIT_FIRST · GDPR_MIN</span>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
