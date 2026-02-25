@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="dark"/>
+  <title>NODE-0003 — IPR Network Node | HERMETICUM B.C.E.</title>
+  <meta name="description" content="NODE-0003 deployment surface for IPR Network. Hash-only, append-only, fail-closed verification."/>
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1620;
+      --text:#e8eef7;
+      --muted:#9fb0c3;
+      --line:rgba(255,255,255,.08);
+      --accent:#00ffe1;
+      --accent2:#7c5cff;
+      --shadow:0 20px 60px rgba(0,0,0,.45);
+      --r:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(0,255,225,.12), transparent 60%),
+        radial-gradient(900px 500px at 100% 10%, rgba(124,92,255,.12), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:auto;padding:28px 18px 80px}
+
+    .top{
+      display:flex;justify-content:space-between;align-items:center;
+      gap:16px;flex-wrap:wrap;margin-bottom:22px;
+    }
+    .brand{font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+    .tag{color:var(--muted);font-size:12px;margin-top:6px}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .nav a{
+      color:var(--muted);text-decoration:none;font-size:13px;
+      padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.06);
+      background:rgba(255,255,255,.02);
+      transition:.15s;
+    }
+    .nav a:hover{
+      color:var(--text);
+      border-color:rgba(0,255,225,.35);
+      transform:translateY(-1px);
+    }
+
+    .hero{
+      border:1px solid var(--line);
+      border-radius:calc(var(--r) + 4px);
+      padding:36px 26px;
+      background:rgba(15,22,32,.55);
+      box-shadow:var(--shadow);
+    }
+    h1{
+      font-size:clamp(28px,4vw,44px);
+      margin:0 0 10px;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .sub{color:var(--muted);font-size:15.5px;max-width:860px;margin:0 0 16px}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .badge{
+      font-size:12px;padding:7px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      color:var(--muted);
+    }
+    .badge strong{color:var(--text)}
+    .cta{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      padding:12px 16px;border-radius:14px;
+      border:1px solid var(--line);
+      text-decoration:none;
+      font-weight:900;font-size:13.5px;
+      color:var(--text);
+      background:rgba(255,255,255,.04);
+      transition:.15s;
+    }
+    .btn:hover{transform:translateY(-2px);border-color:rgba(0,255,225,.5)}
+    .btn.primary{
+      border-color:rgba(0,255,225,.75);
+      background:linear-gradient(180deg,rgba(0,255,225,.22),rgba(0,255,225,.06));
+    }
+
+    .section{margin-top:34px}
+    .section h2{font-size:18px;margin:0 0 10px;letter-spacing:-.01em}
+    .section p{color:var(--muted);max-width:900px;margin:0 0 14px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:14px;margin-top:14px;
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:16px;
+      background:rgba(255,255,255,.03);
+    }
+    .card h3{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+    .card p{margin:0;color:var(--muted);font-size:13.5px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;}
+
+    footer{
+      margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
+      color:var(--muted);font-size:12px;
+      display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="top">
+      <div>
+        <div class="brand">HERMETICUM - BLINDATA · COMPUTABILE · EVOLUTIVA</div>
+        <div class="tag">HERMETICUM B.C.E. S.r.l. — NODE-0003 (EU / fail-closed / hash-only)</div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="./node-pack/">Node Pack</a>
+        <a href="./node-pack/head.json">Head.json</a>
+        <a href="./node-pack/proofs.json">Proofs.json</a>
+        <a href="https://manuelcoletta1-source.github.io/ipr-network/verify/">Verify (ROOT)</a>
+        <a href="https://manuelcoletta1-source.github.io/ipr-network/tools/sha256/">SHA-256 Tool</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>NODE-0003 — Deployment Surface</h1>
+      <p class="sub">
+        This repository is a public surface for the IPR Network: deterministic verification, append-only evidence, fail-closed execution.
+        The operational artifacts live under <span class="mono">/node-pack/</span>.
+      </p>
+
+      <div class="badges" aria-label="Core properties">
+        <span class="badge"><strong>UE-FIRST</strong></span>
+        <span class="badge"><strong>AUDIT-FIRST</strong></span>
+        <span class="badge"><strong>GDPR-MIN</strong></span>
+        <span class="badge"><strong>HASH-ONLY</strong></span>
+        <span class="badge"><strong>APPEND-ONLY</strong></span>
+        <span class="badge"><strong>FAIL-CLOSED</strong></span>
+      </div>
+
+      <div class="cta" aria-label="Primary calls to action">
+        <a class="btn primary" href="./node-pack/">Open Node Pack</a>
+        <a class="btn" href="./node-pack/head.json">Open Head</a>
+        <a class="btn" href="./node-pack/proofs.json">Open Proofs</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What changed</h2>
+      <p>
+        GitHub Pages was rendering a minimal page because there was no root <span class="mono">index.html</span>.
+        This file forces a deterministic, dark landing page and points to the node’s operational endpoints.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Operational endpoints</h3>
+          <p>
+            <span class="mono">/node-pack/head.json</span> and <span class="mono">/node-pack/proofs.json</span> are the machine-readable surfaces.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Network verify</h3>
+          <p>
+            Verification runs from the root network verifier (canonical SHA-256, fail-closed).
+          </p>
+        </div>
+        <div class="card">
+          <h3>Human-friendly</h3>
+          <p>
+            A human can land here, click once, and see the same data the verifier consumes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="mono">Policy: HASH_ONLY · APPEND_ONLY · FAIL_CLOSED · UE_FIRST · AUDIT_FIRST · GDPR_MIN</div>
+      <div>Issuer: <span class="mono">HERMETICUM B.C.E. S.r.l.</span> — Network: <span class="mono">EU</span></div>
+    </footer>
+
+  </div>
+</body>
+</html>
